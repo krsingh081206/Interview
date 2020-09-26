@@ -1,0 +1,14 @@
+1. What is Spring boot? How it is different from Spring framework?
+2. Advantages and disadvantages of spring boot?
+3. What is auto-configuraion? How to enable or disable certain configuration?
+4. What are starter dependencies?
+5. Spring boot common annotations?
+6. Embedded server support in Spring boot?
+7. Why we use spring boot maven plugin?
+8. How to create and bootstrap a simple boot application?
+10. How to enable debug logging?
+11. What is Spring Actuator? What are its advantages?
+12. What is relaxed binding in Spring boot?
+13. How to unit test and intration test a spring boot application?
+14. How to enable hot deployment and live reload on browser?
+15. How to enable HTTPS/SSL support in Spring boot?
