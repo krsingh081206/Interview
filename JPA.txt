@@ -1,0 +1,49 @@
+What is JPA?
+What is the difference between JPA and Hibernate?
+Is it possible to use JPA with noSQl databases?
+What is the difference between JPA and JDO?
+What is Entity?
+Can the Entity class inherit from non-Entity classes?
+Can an Entity class inherit from other Entity classes?
+Can a non-Entity class inherit from an Entity class?
+Can Entity be an abstract class?
+What JPA requirements for Entity classes can you list (at least six requirements)?
+What are the two types of elements in Entity classes. Or in other words, list two types of access (access) to the elements of the Entity classes.
+What is the attribute of the Entity class in JPA terminology?
+What data types are allowed in the attributes of the Entity class (fields or properties)?
+What data types can be used in the attributes included in the primary key of the Entity class (composite or simple) so that the resulting primary key can be used for any database? And in the case of auto-generated primary key (generated primary keys)?
+What is the Embeddable class?
+Can the Embeddable class contain another Embeddable class?
+Can the Embeddable class contain relationships with other Entity or Entity collections? If it can, are there any restrictions on such relationships?
+What requirements does JPA set for Embeddable classes?
+What types of connections (relationship) between Entity do you know (list eight types, or specify four types of connections, each of which can be further divided into two types)?
+What is Mapped Superclass?
+What are the three types of Inheritance Mapping Strategies described in JPA?
+What are the two types of fetch strategies in JPA do you know?
+What is EntityManager and what are its main functions you can list?
+What are the four lifecycle status of an Entity Instance’s Life Cycle you can list?
+How does the operation persist on Entity objects of each of the four statuses?
+How does the remove operation affect the Entity objects of each of the four statuses?
+How does the operation merge affect the Entity objects of each of the four statuses?
+How does the refresh operation affect the Entity objects of each of the four statuses?
+How does the detach operation affect the Entity objects of each of the four statuses?
+What is the Basic annotation for?
+What is the Access annotation for?
+What annotations can overlap connections (override entity relationship) or attributes inherited from the superclass, or specified in the embeddable class when using this embeddable class in one of the entity classes and do not overlap in the others?
+What annotation can I manage JPA caching for this Entity?
+What annotations are used to set the class for converting the basic attribute of the Entity to another type when saving / retrieving data from their base (for example, to work with the attribute of the Entity boolean type, but save it as a number to the base)?
+What annotation can be used to define a class, the methods of which should be executed under certain JPA operations on a given Enitity or Mapped Superclass (such as deleting, changing data, etc.)?
+What are callback methods in JPA for? To which entities do callback method annotations apply? List the seven callback methods (or, what is the same annotation of callback methods)
+What annotations are used to set the order of issuing elements of the Entity collections?
+What annotation can exclude fields and properties of Entity from mapping (property or field is not persistent)?
+What are the two types of cache (cache) you know in JPA and what are they for?
+What are the options for setting the second-level cache (second-level cache) in JPA or what similarly describe what values ​​can the shared-cache-mode element take from persistence.xml?
+How can you change the fetch strategy settings of any Entity attributes for individual queries (query) or search methods (find), then if Enity has an attribute with fetchType = LAZY, but for a specific query you need to make it EAGER or vice versa?
+How is it possible in the code to work with the second-level cache (delete all or certain Entity from the cache, find out if this Entity has been cached, etc.)?
+How can I get JPA metadata (information about Entity types, Embeddable and Managed classes, etc.)?
+What is JPQL (Java Persistence query language) and how is it different from SQL?
+​​What is meant by polymorphism (polymorphism) in JPQL queries (Java Persistence query language) and how to “turn it off”?
+What is the Criteria API and what is it used for?
+What is the difference in Hibernate Entity requirements from the Entity requirements in the JPA specification (see question 10)?
+What is the unique inheritance strategy in Hibernate, but not in the JPA specification?
+What are the main new features in the JPA 2.1 specification compared with JPA 2.0 (list at least five or six new features)?
