@@ -1,0 +1,25 @@
+1. What is Spring Framework? What are it’s main modules?
+2. What are the benefits of using Spring Framework?
+3. What is Inversion of Control (IoC) and Dependency Injection?
+4. Explain IoC in Spring Framework?
+5. Difference between BeanFactory and ApplicationContext?
+6. In how many ways, you can configure Spring into our application?
+7. What is Spring XML-Based Configuration?
+8. What is Spring Java-Based Configuration?
+9. What is Spring Annotation-based Configuration?
+10. Explain Spring Bean lifecycle?
+11. What are different Spring Bean Scopes?
+12. What are inner beans in Spring?
+13. Are Singleton beans thread safe in Spring Framework?
+14. How can you inject a Java Collection in Spring? Give example?
+15. How to inject a java.util.Properties into a Spring Bean?
+16. Explain Spring Bean Autowiring?
+17. Explain different modes of bean autowiring?
+18. How do you turn on annotation based autowiring?
+19. Explain @Required annotation with example?
+20. Explain @Autowired annotation with example?
+21. Explain @Qualifier annotation with example?
+22. Difference between constructor injection and setter injection?
+23. What are the different types of events in spring framework?
+24. Difference between FileSystemResource and ClassPathResource?
+25. Name some of the design patterns used in Spring Framework?
