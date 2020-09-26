@@ -1,3 +1,5 @@
+Core
+======
 1. What is Spring Framework? What are it’s main modules?
 2. What are the benefits of using Spring Framework?
 3. What is Inversion of Control (IoC) and Dependency Injection?
@@ -23,3 +25,12 @@
 23. What are the different types of events in spring framework?
 24. Difference between FileSystemResource and ClassPathResource?
 25. Name some of the design patterns used in Spring Framework?
+
+AOP
+===
+Difference between concern and cross-cutting concern?
+What are the available AOP implementations?
+What are the different advice types in spring AOP?
+What is Spring AOP Proxy?
+What is Joint point and Point cut?
+What is aspect weaving?
