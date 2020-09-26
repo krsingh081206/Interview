@@ -1,0 +1,8 @@
+1. How you will design a good key for HashMap?
+2. Difference between HashMap and ConcurrentHashMap?
+3. Difference between HashMap and Collections.synchronizedMap(HashMap)?
+4. Difference between ConcurrentHashMap and Collections.synchronizedMap(HashMap)?
+5. Difference between HashMap and HashTable?
+6. Difference between HashTable and Collections.synchronized(HashMap)?
+7. Impact of random/fixed hashCode() value for key?
+8. Using HashMap in non-synchronized code in multi-threaded application?
