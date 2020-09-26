@@ -1,0 +1,24 @@
+Open closed principle
+Single responsibility principle
+State Design Pattern
+Mediator Design Pattern
+Observer Design Pattern
+Memento Design Pattern
+Iterator Design Pattern
+Proxy Design Pattern
+Flyweight Design Pattern
+Facade Design Pattern
+Command Design Pattern
+Strategy Design Pattern
+Template Method Design Pattern
+Composite Design Pattern
+Bridge Design Pattern
+Adapter Design Pattern in Java
+Builder Design Pattern in Java
+Decorator Design Pattern in Java
+Visitor Design Pattern Example
+Chain of Responsibility Design Pattern
+Prototype design pattern in Java
+Abstract Factory Pattern Explained
+Java Factory Pattern Explained
+Java Singleton Pattern Explained
