@@ -31,6 +31,9 @@ What is the Basic annotation for?
 What is the Access annotation for?
 What annotations can overlap connections (override entity relationship) or attributes inherited from the superclass, or specified in the embeddable class when using this embeddable class in one of the entity classes and do not overlap in the others?
 What annotation can I manage JPA caching for this Entity?
+#############
+https://codingcompiler.com/jpa-interview-questions-answers/
+##################
 What annotations are used to set the class for converting the basic attribute of the Entity to another type when saving / retrieving data from their base (for example, to work with the attribute of the Entity boolean type, but save it as a number to the base)?
 What annotation can be used to define a class, the methods of which should be executed under certain JPA operations on a given Enitity or Mapped Superclass (such as deleting, changing data, etc.)?
 What are callback methods in JPA for? To which entities do callback method annotations apply? List the seven callback methods (or, what is the same annotation of callback methods)
