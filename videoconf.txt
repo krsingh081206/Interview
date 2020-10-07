@@ -1,0 +1,2 @@
+Implement a videoconferencesystem with 10 participants . The video-conference system should wait for the arrival of all the participants before it begins.
+
