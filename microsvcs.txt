@@ -7,3 +7,4 @@ Which brokers are the best for asynchronous Java messaging?
 Which libraries are the best for synchronous Java REST calls?
 Messaging Resilience Patterns
 How to make a Java microservice resilient?
+https://www.edureka.co/blog/interview-questions/microservices-interview-questions/
