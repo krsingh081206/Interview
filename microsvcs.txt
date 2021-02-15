@@ -1,0 +1,9 @@
+What about Distributed Transactions? Performance Testing? Other topics?
+How to do authorization and authentication with Java microservices?
+How do my microservices find each other?
+How do I enable logging for all my Java microserviecs?
+Which libraries can I use for microservice testing?
+Which brokers are the best for asynchronous Java messaging?
+Which libraries are the best for synchronous Java REST calls?
+Messaging Resilience Patterns
+How to make a Java microservice resilient?
