@@ -1,0 +1,22 @@
+Write a program to sort a list of Students according to the student name and secondly, sort according to student age.
+
+Before Sorting:
+Input
+======
+Student{Name=Ajay, Age=27}
+Student{Name=Sneha, Age=23}
+Student{Name=Simran, Age=37}
+Student{Name=Ajay, Age=22}
+Student{Name=Ajay, Age=29}
+Student{Name=Sneha, Age=22}
+
+Output
+=======
+After Sorting:
+
+Student{Name=Ajay, Age=22}
+Student{Name=Ajay, Age=27}
+Student{Name=Ajay, Age=29}
+Student{Name=Simran, Age=37}
+Student{Name=Sneha, Age=22}
+Student{Name=Sneha, Age=23}
