@@ -1,0 +1,59 @@
+Here are 5 scenario-based questions with example entities involved:
+
+Scenario: E-commerce Orders and Customers
+Question: Imagine you're working for an e-commerce company. You have two tables: Orders and Customers. The Orders table contains information about orders placed by customers, including customer IDs, order IDs, and order dates. The Customers table contains customer details such as customer ID, name, email, and address. How would you write a SQL query to retrieve the names of customers who have placed orders in the last month?
+Scenario: HR Database
+Question: In an HR database, you have two tables: Employees and Departments. The Employees table contains employee information including employee ID, name, department ID, and salary. The Departments table contains department details such as department ID and department name. How would you write a SQL query to fetch the names of all employees along with their corresponding department names?
+Scenario: Inventory Management
+Question: Suppose you're managing an inventory system for a retail store. You have two tables: Products and Orders. The Products table contains product details like product ID, name, price, and quantity in stock. The Orders table contains information about customer orders, including order ID, product ID, quantity ordered, and order date. Can you write a SQL query to retrieve the total sales revenue generated from each product in the last quarter?
+Scenario: Social Media Platform
+Question: You're working on a social media platform and need to analyze user interactions. There are two tables: Users and Posts. The Users table contains user information such as user ID, username, and email. The Posts table contains post details including post ID, user ID of the author, post content, and post timestamp. How would you write a SQL query to find the usernames of users who have posted content in the last 24 hours?
+Scenario: Student Enrollment
+Question: In a university database, you have two tables: Students and Courses. The Students table contains student information like student ID, name, and email. The Courses table contains course details including course ID, course name, and instructor ID. Additionally, there's a third table named Enrollments which maps students to the courses they're enrolled in, with columns for student ID and course ID. Can you write a SQL query to retrieve the names of students who are enrolled in a specific course, along with the course name?
+
+
+Answers
+Certainly! Here are the answers to the scenario-based questions:
+
+Scenario: E-commerce Orders and Customers
+Answer: To retrieve the names of customers who have placed orders in the last month, you can use an SQL query with an INNER JOIN between the Orders and Customers tables, filtering orders based on the order date. Here's the query:
+sql
+Copy code
+SELECT DISTINCT Customers.name
+FROM Customers
+INNER JOIN Orders ON Customers.customer_id = Orders.customer_id
+WHERE Orders.order_date >= DATEADD(MONTH, -1, GETDATE())
+Scenario: HR Database
+Answer: To fetch the names of all employees along with their corresponding department names, you can use an SQL query with an INNER JOIN between the Employees and Departments tables. Here's the query:
+sql
+Copy code
+SELECT Employees.name, Departments.department_name
+FROM Employees
+INNER JOIN Departments ON Employees.department_id = Departments.department_id
+Scenario: Inventory Management
+Answer: To retrieve the total sales revenue generated from each product in the last quarter, you can use an SQL query with an INNER JOIN between the Products and Orders tables, filtering orders based on the order date within the last quarter and calculating the total sales revenue for each product. Here's the query:
+sql
+Copy code
+SELECT Products.product_name, SUM(Products.price * Orders.quantity_ordered) AS total_revenue
+FROM Products
+INNER JOIN Orders ON Products.product_id = Orders.product_id
+WHERE Orders.order_date >= DATEADD(QUARTER, -1, GETDATE())
+GROUP BY Products.product_name
+Scenario: Social Media Platform
+Answer: To find the usernames of users who have posted content in the last 24 hours, you can use an SQL query with an INNER JOIN between the Users and Posts tables, filtering posts based on the post timestamp within the last 24 hours. Here's the query:
+sql
+Copy code
+SELECT DISTINCT Users.username
+FROM Users
+INNER JOIN Posts ON Users.user_id = Posts.user_id
+WHERE Posts.post_timestamp >= DATEADD(HOUR, -24, GETDATE())
+Scenario: Student Enrollment
+Answer: To retrieve the names of students who are enrolled in a specific course along with the course name, you can use an SQL query with INNER JOINs between the Students, Courses, and Enrollments tables, filtering enrollments based on the course ID. Here's the query:
+sql
+Copy code
+SELECT Students.name, Courses.course_name
+FROM Students
+INNER JOIN Enrollments ON Students.student_id = Enrollments.student_id
+INNER JOIN Courses ON Enrollments.course_id = Courses.course_id
+WHERE Courses.course_id = <specific_course_id>
+These SQL queries demonstrate how to effectively use JOINs to retrieve relevant information from multiple tables based on specific criteria.
