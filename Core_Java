@@ -1,0 +1,380 @@
+Substring Count
+==============
+Write code to find substring count "abc" in below input String
+
+bacabcbccabccabcbcabccbaabc
+
+
+Functional Knowledge of project is fine. Hands on  knowledge of Core Java/Collections/ w.r.t.  2.7 plus years  of experience is not fine.
+Weak in DataStructures.
+Not able to solve/write code correctly in Core Java for problem statements.
+Concordance
+===============
+Write a program that creates a concordance of characters occurring in a string
+(i.e., which characters occur where in a string). 
+Input String : HelloWorld
+Output : {d=[9], o=[4, 6], r=[7], W=[5], H=[0], l=[2, 3, 8], e=[1]}
+
+Candidate was not able to comprehend the problem statement even after explaining multiple times.
+
+Multi-Attribute Sorting
+========================
+
+Write a program to sort a list of Students according to the student name and secondly, sort according to student age.
+
+Before Sorting:
+Input
+======
+Student{Name=Ajay, Age=27}
+Student{Name=Sneha, Age=23}
+Student{Name=Simran, Age=37}
+Student{Name=Ajay, Age=22}
+Student{Name=Ajay, Age=29}
+Student{Name=Sneha, Age=22}
+
+Output
+=======
+After Sorting:
+
+Student{Name=Ajay, Age=22}
+Student{Name=Ajay, Age=27}
+Student{Name=Ajay, Age=29}
+Student{Name=Simran, Age=37}
+Student{Name=Sneha, Age=22}
+Student{Name=Sneha, Age=23}
+
+Code Snippet
+=============
+Stream.of("d2", "a2", "b1", "b3", "c")
+    .filter(s -> {
+        System.out.println("filter: " + s);
+        return true;
+    })
+    .forEach(s -> System.out.println("forEach: " + s));
+
+#########################################################
+Scenario #1
+Suppose you have 2 threads (Thread-1 and Thread-2) on same object. 
+Thread-1 is in synchronized method1(), can Thread-2 enter synchronized method2() at same time? 
+
+class Test {
+
+public synchronized method1(){}
+
+
+public synchronized method2(){}
+}
+
+Scenario #2
+Suppose you have 2 threads (Thread-1 and Thread-2) on same object. 
+Thread-1 is in static synchronized method1(), can Thread-2 enter synchronized method2() at same time?
+
+class Test {
+
+public static synchronized method1(){}
+
+
+public synchronized method2(){}
+}
+
+Scenario #3
+Suppose you have 2 threads (Thread-1 and Thread-2) on same object. 
+Thread-1 is in static synchronized method1(), can Thread-2 enter static synchronized method2() at same time?
+class Test {
+
+public static synchronized method1(){}
+
+
+public static synchronized method2(){}
+}
+
+#############################
+Let us say we have a directory of files with different extensions (.java,.c,.py,.go,.tf,.kt).
+Write a program to sort it by programming language name.
+
+Sample input 
+{python=.py, c++=.cpp, java=.java, golang=.go, kotlin=.kt, terraform=.tf}
+
+Sample output
+{c++=.cpp, golang=.go, java=.java, kotlin=.kt, python=.py, terraform =.tf}
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+Asked questions on JPA Entity while designing a RBAC System. Canidate was able to partially design the schema. 
+
+Functional Knowledge of project is fine. Hands on  knowledge of Core Java/Collections/Spring/JPA/Angular  w.r.t.  3.5 plus years  of experience is good.
+Good in DataStructures/JPA.
+Asked questions on Spring Boot/JPA/Angular. Asked questions on Entity Relation Mapping
+Able to solve/write code correctly in Core Java for problem statements.
+
+Code Snippet
+=============
+Stream.of("d2", "a2", "b1", "b3", "c")
+    .filter(s -> {
+        System.out.println("filter: " + s);
+        return true;
+    })
+    .forEach(s -> System.out.println("forEach: " + s));
+
+Candidate was  able to identify correct output.	
+	
+Coding Exercise	
+===============	
+Write a program to filter a list of Students who are occurring more than 1
+
+Input List
+======
+Student{Name=Ajay, Age=22}
+Student{Name=Sneha, Age=23}
+Student{Name=Simran, Age=37}
+Student{Name=Ajay, Age=22}
+Student{Name=Ajay, Age=29}
+Student{Name=Sneha, Age=23}
+Student{Name=Sneha, Age=27}
+
+
+Output should be
+
+Student{Name=Ajay, Age=22}
+Student{Name=Sneha, Age=23}
+
+Candidate was  able to write partially correct code.
+
+#########################################################
+Scenario #1
+Suppose you have 2 threads (Thread-1 and Thread-2) on same object. 
+Thread-1 is in synchronized method1(), can Thread-2 enter synchronized method2() at same time? 
+
+class Test {
+
+public synchronized method1(){}
+
+
+public synchronized method2(){}
+}
+
+Scenario #2
+Suppose you have 2 threads (Thread-1 and Thread-2) on same object. 
+Thread-1 is in static synchronized method1(), can Thread-2 enter synchronized method2() at same time?
+
+class Test {
+
+public static synchronized method1(){}
+
+
+public synchronized method2(){}
+}
+
+Scenario #3
+Suppose you have 2 threads (Thread-1 and Thread-2) on same object. 
+Thread-1 is in static synchronized method1(), can Thread-2 enter static synchronized method2() at same time?
+class Test {
+
+public static synchronized method1(){}
+
+
+public static synchronized method2(){}
+}
+
+Candidate was able to identify  correct output for above scenarios.
+
+
+
+
+Functional Knowledge of project is fine .  Hands on  knowledge of Core Java/Collections/Spring  w.r.t.  5 plus years  of relevant Java experience is fine.
+Average in Concurrency/Thread Safety Concepts
+Asked questions on Spring Boot/JPA/Hibernate. Asked questions on JPA transactions 
+Overall Hands on coding skills and Spring/JPA knowledge is average.
+Able to write code and average analytical skills, seems trainable. 
+
+
+#########################################################
+Scenario #1
+Suppose you have 2 threads (Thread-1 and Thread-2) on same object. 
+Thread-1 is in synchronized method1(), can Thread-2 enter synchronized method2() at same time? 
+
+class Test {
+
+public synchronized method1(){}
+
+
+public synchronized method2(){}
+}
+
+Scenario #2
+Suppose you have 2 threads (Thread-1 and Thread-2) on same object. 
+Thread-1 is in static synchronized method1(), can Thread-2 enter synchronized method2() at same time?
+
+class Test {
+
+public static synchronized method1(){}
+
+
+public synchronized method2(){}
+}
+
+Scenario #3
+Suppose you have 2 threads (Thread-1 and Thread-2) on same object. 
+Thread-1 is in static synchronized method1(), can Thread-2 enter static synchronized method2() at same time?
+class Test {
+
+public static synchronized method1(){}
+
+
+public static synchronized method2(){}
+}
+
+Candidate was  able to identify  correct output for scenario 1 and scenario 3.
+
+
+	
+	
+Coding Exercise	
+===============	
+Write a program to sort a list of Students according to the student name and secondly, sort according to student age.
+
+ 
+
+Before Sorting:
+Input
+======
+Student{Name=Ajay, Age=27}
+Student{Name=Sneha, Age=23}
+Student{Name=Simran, Age=37}
+Student{Name=Ajay, Age=22}
+Student{Name=Ajay, Age=29}
+Student{Name=Sneha, Age=22}
+
+ 
+
+Output
+=======
+After Sorting:
+
+ 
+
+Student{Name=Ajay, Age=22}
+Student{Name=Ajay, Age=27}
+Student{Name=Ajay, Age=29}
+Student{Name=Simran, Age=37}
+Student{Name=Sneha, Age=22}
+Student{Name=Sneha, Age=23}
+
+Candidate was  able to write correct code.
+
+
+/*****************************************************************************************/
+Functional Knowledge of project is fine . But Hands on  knowledge of Core Java/Collections/Spring  w.r.t.  around 8 years  of experience is  fine.
+Fair in DataStructures
+Average in Concurrency/Thread Safety Concepts
+Asked questions around JPA transactions/Optimistic Locking/Pessimistic Locking.
+Asked question on usage of Atomic Integer.
+Response was average.
+Able to solve/write code correctly in Core Java for problem statements.
+
+
+#########################################################
+Scenario #1
+Suppose you have 2 threads (Thread-1 and Thread-2) on same object. 
+Thread-1 is in synchronized method1(), can Thread-2 enter synchronized method2() at same time? 
+
+class Test {
+
+public synchronized method1(){}
+
+
+public synchronized method2(){}
+}
+
+Scenario #2
+Suppose you have 2 threads (Thread-1 and Thread-2) on same object. 
+Thread-1 is in static synchronized method1(), can Thread-2 enter synchronized method2() at same time?
+
+class Test {
+
+public static synchronized method1(){}
+
+
+public synchronized method2(){}
+}
+
+Scenario #3
+Suppose you have 2 threads (Thread-1 and Thread-2) on same object. 
+Thread-1 is in static synchronized method1(), can Thread-2 enter static synchronized method2() at same time?
+class Test {
+
+public static synchronized method1(){}
+
+
+public static synchronized method2(){}
+}
+
+Candidate was partially able to identify  correct output for above scenarios.
+
+
+	
+Coding Exercise	
+===============	
+Write a program to filter a list of Students who are occurring more than 1
+
+Input List
+======
+Student{Name=Ajay, Age=22}
+Student{Name=Sneha, Age=23}
+Student{Name=Simran, Age=37}
+Student{Name=Ajay, Age=22}
+Student{Name=Ajay, Age=29}
+Student{Name=Sneha, Age=23}
+Student{Name=Sneha, Age=27}
+
+
+Output should be
+
+Student{Name=Ajay, Age=22}
+Student{Name=Sneha, Age=23}
+
+Candidate was able to write code.
+
+If you have a circular reference of objects, but you no
+longer reference it from an execution thread, will this
+object be a potential candidate for garbage collection?
+
+Candidate was able to answer questions related to garbage collection.
+
+Code Snippet
+=============
+Stream.of("d2", "a2", "b1", "b3", "c")
+    .filter(s -> {
+        System.out.println("filter: " + s);
+        return true;
+    })
+    .forEach(s -> System.out.println("forEach: " + s));
+
+Candidate was not  able to identify correct output.
+
+ORM exercise
+============================
+Write sample JPA entity classes for below scenarios depiciting 
+
+Student Entity has one to many relationship with Address Entity.
+
+Student Attributes :
+	ID,
+	Name
+
+Address Attributes :
+   ID,
+   Street,
+   CITY,
+   ZIPCODE
+   
