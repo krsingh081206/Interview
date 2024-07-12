@@ -3,3 +3,5 @@ Let's say we have distributed application with two web servers, connected to the
  In the same second Alice on web server 1 books 2 seats  and get seat number 9 and 10. 
  In the same moment Bob reserves 2 seats on web server 2. It also gets seat number 9 and 5 for Bob and tries to write it back to database.
  But it fails, since Alice's commit was first. I want a web application server to book ticket for Bob again and then - try to save again until it succeeds.
+
+You are working as a senior software engineer at an e-commerce company. The company is implementing a new feature for flash sales, where a limited quantity of a high-demand product is sold at a significant discount for a very short period. This feature is expected to attract a large number of concurrent users attempting to purchase the product simultaneously. To ensure that the inventory count remains accurate and no overselling occurs, you need to implement a distributed locking mechanism.
