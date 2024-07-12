@@ -5,3 +5,38 @@ Let's say we have distributed application with two web servers, connected to the
  But it fails, since Alice's commit was first. I want a web application server to book ticket for Bob again and then - try to save again until it succeeds.
 
 You are working as a senior software engineer at an e-commerce company. The company is implementing a new feature for flash sales, where a limited quantity of a high-demand product is sold at a significant discount for a very short period. This feature is expected to attract a large number of concurrent users attempting to purchase the product simultaneously. To ensure that the inventory count remains accurate and no overselling occurs, you need to implement a distributed locking mechanism.
+
+What is the @Around advice in Spring AOP and how is it different from other types of advice?
+
+Answer:
+The @Around advice in Spring AOP is the most powerful type of advice. It surrounds a join point, such as a method invocation, and allows you to perform custom behavior both before and after the method execution, and even modify the return value or throw an exception.
+
+Difference from other advice types:
+
+@Before: Runs before the method execution.
+@After: Runs after the method execution (regardless of the outcome).
+@AfterReturning: Runs after the method returns a result.
+@AfterThrowing: Runs if the method throws an exception.
+@Around: Can control when and if the method is executed, as well as modify the method's return value and handle exceptions.
+Example:
+
+java
+Copy code
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.stereotype.Component;
+
+@Aspect
+@Component
+public class PerformanceAspect {
+
+    @Around("execution(* com.example.service.*.*(..))")
+    public Object logExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable {
+        long start = System.currentTimeMillis();
+        Object proceed = joinPoint.proceed();
+        long executionTime = System.currentTimeMillis() - start;
+        System.out.println(joinPoint.getSignature() + " executed in " + executionTime + "ms");
+        return proceed;
+    }
+}
