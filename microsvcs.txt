@@ -8,3 +8,185 @@ Which libraries are the best for synchronous Java REST calls?
 Messaging Resilience Patterns
 How to make a Java microservice resilient?
 https://www.edureka.co/blog/interview-questions/microservices-interview-questions/
+
+Questions around 12 Factor App
+1. How does the 12-Factor App methodology help in building scalable and maintainable microservices in a Spring Boot and Kubernetes environment?
+Answer:
+The 12-Factor App methodology provides best practices for building cloud-native applications, ensuring scalability, maintainability, and portability. When combined with Spring Boot and Kubernetes, it enables:
+
+Codebase (Factor 1 - Codebase): A single Git repository per microservice, ensuring clear versioning.
+Dependencies (Factor 2 - Dependencies): Using Maven or Gradle for dependency management in Spring Boot and keeping dependencies in pom.xml or build.gradle.
+Config (Factor 3 - Config): Externalizing configuration using Spring Cloud Config, Kubernetes ConfigMaps, and Secrets.
+Backing Services (Factor 4 - Backing Services): Database connections and services are treated as attached resources via Kubernetes Services, StatefulSets, and Environment Variables.
+Processes (Factor 6 - Processes): Stateless services in Spring Boot running in Kubernetes Pods with horizontal scaling.
+Port Binding (Factor 7 - Port Binding): Spring Boot applications expose a port using server.port and Kubernetes ingress/LoadBalancer routes traffic.
+Concurrency (Factor 8 - Concurrency): Kubernetes Horizontal Pod Autoscaler (HPA) scales pods based on CPU/memory utilization.
+Logs (Factor 11 - Logs): Logs are sent to stdout and collected via Kubernetes logging mechanisms like Fluentd, ELK, or Loki.
+By following these principles, applications become portable, resilient, and scalable in cloud-native environments.
+
+2. How can you implement the "Config" factor of a 12-Factor App in a Spring Boot application deployed on Kubernetes?
+Answer:
+The "Config" factor mandates storing configuration outside the codebase. In a Spring Boot application on Kubernetes, we achieve this using:
+
+Spring Cloud Config
+
+Externalized configuration stored in a centralized Git repository.
+Spring Boot reads configs dynamically using @RefreshScope.
+Kubernetes ConfigMaps and Secrets
+
+ConfigMaps store non-sensitive configurations (e.g., URLs, feature flags).
+Secrets store sensitive data (e.g., DB credentials, API keys) and are mounted as environment variables or files.
+Example using ConfigMaps and Secrets in Kubernetes:
+
+yaml
+Copy
+Edit
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+data:
+  SERVER_PORT: "8080"
+  LOG_LEVEL: "INFO"
+
+apiVersion: v1
+kind: Secret
+metadata:
+  name: db-secret
+type: Opaque
+data:
+  DB_PASSWORD: c2VjcmV0MTIz (base64 encoded)
+Spring Boot application.yml:
+
+yaml
+Copy
+Edit
+server:
+  port: ${SERVER_PORT:8080}
+logging:
+  level:
+    root: ${LOG_LEVEL:INFO}
+spring:
+  datasource:
+    password: ${DB_PASSWORD}
+Deployment in Kubernetes:
+
+yaml
+Copy
+Edit
+envFrom:
+  - configMapRef:
+      name: app-config
+  - secretRef:
+      name: db-secret
+This ensures the application follows the 12-Factor Config principle by separating configuration from the code.
+
+3. How do you handle application logs in a 12-Factor compliant Spring Boot application on Kubernetes?
+Answer:
+The "Logs" factor states that applications should treat logs as event streams and avoid managing log files.
+
+Implementation:
+Standard Output Logging
+
+Spring Boot logs to stdout using logback.xml or application.yml configuration.
+Kubernetes collects logs from the container (kubectl logs <pod>).
+Centralized Logging with Fluentd/ELK/Loki
+
+Fluentd or Logstash collects logs from all pods and sends them to Elasticsearch, Kibana, or Loki.
+Spring Boot Logback Configuration (log to JSON for ELK/Loki compatibility):
+
+xml
+Copy
+Edit
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder"/>
+    </appender>
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
+Example Kubernetes Fluentd Sidecar Pattern:
+yaml
+Copy
+Edit
+containers:
+  - name: app
+    image: myapp:latest
+    stdout
+  - name: fluentd
+    image: fluentd:latest
+    volumeMounts:
+      - name: log-volume
+        mountPath: /var/log/app
+This ensures logs are captured in a structured, scalable, and 12-Factor compliant way.
+
+4. How does the "Processes" factor affect the design of Spring Boot microservices in Kubernetes?
+Answer:
+The "Processes" factor emphasizes that applications should be stateless and self-contained, meaning:
+
+No Stateful Session Data
+
+Spring Boot microservices avoid storing session data.
+Stateless authentication is used (e.g., JWT-based authentication with Okta).
+Scaling using Kubernetes Pods
+
+Stateless pods can be horizontally scaled with Kubernetes HPA.
+Database and State Management
+
+State is stored in external databases like PostgreSQL or Redis.
+Use Spring Data JPA for persistence and Spring Cache (Redis) for performance optimization.
+Graceful Shutdown in Kubernetes
+
+Spring Boot applications should handle SIGTERM for clean shutdown.
+Implementing a shutdown hook in ApplicationListener<ContextClosedEvent>:
+java
+Copy
+Edit
+@Component
+public class ShutdownListener implements ApplicationListener<ContextClosedEvent> {
+    private static final Logger LOGGER = LoggerFactory.getLogger(ShutdownListener.class);
+
+    @Override
+    public void onApplicationEvent(ContextClosedEvent event) {
+        LOGGER.info("Shutting down gracefully...");
+    }
+}
+By following this, microservices remain resilient and scalable.
+
+5. How do you handle database migrations in a Spring Boot microservice using Kubernetes while following the 12-Factor App methodology?
+Answer:
+The "Build, Release, Run" factor states that migrations should be automated and not tied to the app runtime.
+
+Best Practices for Database Migrations in Spring Boot & Kubernetes:
+
+Flyway or Liquibase
+
+Flyway is a common choice for managing schema changes automatically.
+Scripts run at startup using spring.flyway.migrate-on-startup=true.
+Decouple Migrations from the App
+
+Create a separate Kubernetes Job for DB migrations.
+Example Flyway Job:
+yaml
+Copy
+Edit
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: flyway-migration
+spec:
+  template:
+    spec:
+      containers:
+        - name: flyway
+          image: flyway/flyway:latest
+          command: ["flyway", "migrate"]
+          envFrom:
+            - configMapRef:
+                name: db-config
+      restartPolicy: Never
+This ensures schema changes are migrated independently, following the Build, Release, Run principle.
+
+Conclusion
+These questions focus on real-world implementations of 12-Factor App principles using Spring Boot and Kubernetes. They test deep technical knowledge of a 10-year experienced candidate, covering configuration, logging, state management, process isolation, and database migrations.
